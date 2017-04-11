@@ -1,0 +1,311 @@
+html{
+	font-size: 100%;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Josefin Sans', sans-serif;
+	
+	color:#080809;
+
+	background: url('img/background.jpg')no-repeat fixed center;
+}
+
+
+object{
+	width: 2rem;
+	margin: 1rem 0.5rem;
+}
+
+
+.page-header{
+	height: 100vh;
+}
+
+.nav-container{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	justify-content: space-around;
+	align-items: baseline;
+	background: url('img/background-1.jpg');
+
+	-webkit-box-shadow: 0px 8px 28px 0px rgba(39,41,42,1);
+	-moz-box-shadow: 0px 8px 28px 0px rgba(39,41,42,1);
+	box-shadow: 0px 8px 28px 0px rgba(39,41,42,1);
+
+}
+.page-logo{
+	font-family: 'Lobster', cursive;
+	text-decoration: none;
+	color: #d8bcbc;
+	line-height: 0;
+	margin-top: 0.5rem;
+	margin-left:0.5rem;
+}
+.nav-menu{
+	list-style: none;
+	display: flex;
+	flex-direction: row;
+	margin-top: 0.5rem;
+
+
+}
+.nav-menu li{
+	margin-left: 2rem;
+	color: #d8bcbc;
+}
+.nav-menu li:hover{
+	cursor: pointer;
+	color:#fbefef;
+}
+
+.menu-link{
+	text-decoration: none;
+	color:#d8bcbc ;
+}
+.menu-link:hover{
+	color:#fbefef;
+}
+.sign-up:after{
+	padding: 0rem 1rem;
+	border: 1px solid blue;
+	position: absolute;
+}
+.icon-hamburger{
+	display: none;
+}
+.icon-hamburger-cross{
+	display: none;
+}
+
+.scroll-up{
+	width: 20px;
+	height:20px;
+	position: fixed;
+	bottom: 0;
+
+}
+/*----------------------------------------------------------------*/
+
+.author-container{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	box-sizing: border-box;
+
+	width: 100%;
+	height: inherit;
+
+
+
+	padding: 1rem;
+}
+.caption{
+	font-family: 'Lobster', cursive;
+	font-weight: 800;
+	text-align: center;
+	font-size: 500%;
+	margin-top: 10rem;
+	margin-bottom: 2rem;
+}
+.caption::after{
+	display: block;
+	width: 10rem;
+	margin: auto;
+	margin-top: 1.5rem;
+
+	border-bottom: 0.2rem solid #080809;
+	content: '';
+
+}
+.author-name{
+	margin-bottom: 0;
+	margin-top: 0;
+}
+.author-caption{
+	margin-top: 0.5rem;
+}
+
+.contact-header a{
+	display: block;
+	padding: 0;
+
+}
+.contact-container object{
+	pointer-events: none;
+}
+
+
+.contact-container {
+	display: flex;
+	align-items: flex-end;
+	height: 100%;
+}
+
+
+	
+/*----------------------------------------------------------------------*/
+
+
+.section{
+	padding: 1rem;
+	padding-top: 2rem;
+}
+
+.section-header{
+	font-size: 200%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	padding-bottom:1rem;	
+
+}
+.section-header::after{
+	display: block;
+
+	width: 7rem;
+	margin-top: 0.5rem;
+	border-bottom: 0.2rem solid;
+	content: "";
+}
+
+.technology-section{
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	color: #d8bcbc;
+
+	background: url('img/background-1.jpg');
+}
+.technology-section object{
+	width: 6rem;
+}
+.tiles-container{
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.tile{
+	margin: 2rem;
+	flex-basis: 10%;
+}
+.tile p{
+	font-size: 90%;
+	margin: 0;
+	padding-bottom: 0.3rem;
+}
+
+.ourWork-section{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100vh;
+	
+
+}
+.gallery{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	max-width: 90rem;
+	margin-bottom: 2rem;
+}
+.gallery .img{
+	max-width: 30rem;
+}
+.gallery .img:hover{
+	transform: scale(1.05);
+
+}
+
+.aboutUs-section{
+	color: #d8bcbc;
+	
+	background: url('img/background-1.jpg');
+}
+
+.aboutUs-section p{
+	max-width: 90rem;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.contact-container-bottom {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;	
+	justify-content: center;
+	padding: 1.5rem;
+
+}
+
+.address{
+	text-align: left;
+	padding: 1rem;
+	padding-right: 3rem;
+
+}
+.address p{
+	margin: 0;
+	font-weight: bold;
+}
+
+.contact-form{
+	padding: 1rem;
+	padding-left: 3rem;
+
+}
+
+.input{
+	display: block;
+	margin-bottom: 1rem;
+	width: 15rem;
+}
+textarea.input{
+	height: 10rem;
+}
+
+/*----------------------------------------------------*/
+
+.footer{
+	color: #e9cdcd;
+	text-align: center;
+	padding: 0.3rem;
+	
+	background: url('img/background-1.jpg');
+}
+.footer p{
+	margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+    .nav-menu{
+    	display: none;
+    }
+
+    .icon-hamburger{
+    display: initial;
+    height: 1.5rem;
+	}
+	.icon-hamburger-cross{
+		display: none;
+		height: 1.5rem;
+	}
+
+	.nav-container.open-menu .icon-hamburger{
+		display: none;
+	}
+	.nav-container.open-menu .icon-hamburger-cross{
+		display: initial;
+	}
+	.nav-container{
+	justify-content: space-between;
+	}
+
+}

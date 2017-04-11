@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="icon" href="img/Pencil.ico" type="image/gif" sizes="32x32">
+	<title>Moja wizytówka</title>
+
+	<meta name="description" content="Opis w Google" />
+	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+
+	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,700,800" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&amp;subset=latin-ext" rel="stylesheet"> 
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<link rel="stylesheet" type="text/css" href="css/modal-style.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery.scrollTo.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="vendor/modal-script.js"></script>
+</head>
+<body class="modal-open">
+	<header class="page-header">
+		<div class="nav-container open-menu">
+			<a href="#" title="go back to homepage" class="page-logo">
+				<h1>Portfolio</h1>
+			</a>
+
+			<nav class="page-nav ">
+				<ul class="nav-menu">
+					<li><a class="menu-link" id="home" href="#">Home</a></li>
+					<li><a class="menu-link" id="technology" href="#">Technology</a></li>
+					<li><a class="menu-link" id="ourWork" href="#">Our Work</a></li>
+					<li><a class="menu-link" id="aboutUs" href="#">About us</a></li>
+					<li><a class="menu-link" id="contact"  href="#">Contact</a></li>
+					<li class="sign-up">Sign up</li>
+				</ul>
+					
+				<div class="modal-container" >
+			    
+				    <div class="modal">
+				      <div class="close">[X]</div>
+						      <h2>Create Account:</h2>
+						    <form class="sign-up">
+						      <div class="row">
+						        <label for="firstname">Name: 
+						          <input type="text" id= "firstname" class="input" placeholder="Imię">
+						        </label>
+						      </div>
+						      <div class="row"> 
+						        <label for="lastname">Last Name: 
+						          <input type="text" id= "lastname" class="input" placeholder="Nazwisko">
+						        </label>
+						      </div>
+						      <div class="row">
+						        <label for="email">E-mail: 
+						          <input type="" id="email" placeholder="Adres E-mail" class="input" >
+						        </label>
+						      </div>
+						      <div class="row">
+						        <label for="dateofbirth">Date Of Birth:
+						         <select name="dateofbirth" id=" dateofbirth">
+						           <option value="">1900</option>
+						           <option value="">2000</option>
+						           <option value="">2010</option>
+						         </select>
+						       </label>
+						      </div>
+						      <div class="row pass-container">
+						        <label for="password">Password: 
+						          <input type="text" id="password" class="input" placeholder="Hasło"> 
+						          <progress id ="passwordComplete" class="input" class="progress" value="0"></progress>
+						        </label>
+						      </div>
+						      <div class="row">
+						        <label for="enterpass">Enter Password: 
+						          <input type="text" id="enterpass" class="input" placeholder="Powtórz hasło">
+						        </label>
+						      </div>
+						      <div class="row">
+						        <label for="aFewWords">A few words about You : 
+						          <input type="text" id="fewWords" class="input"  maxlength="50">
+						          <span class="char">Pozostało znaków: </span>
+						          <span class="char howMuchChar"> 50 </span>
+						        </label>
+						      </div>
+						      <div class="row register-btn">
+						        <button type="submit" > Register</button>
+						      </div>
+						    </form>
+				    </div>
+			 </div>	
+
+			</nav>
+			<object type="image/svg+xml" data="svg-icon/002-menu-lines.svg" class="icon-hamburger">Your browser does not support SVGs</object>
+			<object type="image/svg+xml" data="svg-icon/001-cancel.svg" class="icon-hamburger-cross">Your browser does not support SVGs</object>
+			
+			<div class="scroll-up"></div>
+
+		</div>
+
+		<div class="author-container">	
+			<h1 class="caption">Fortpolio</h1>
+			<h1 class="author-name"> Artur Szydło</h1>
+			<h3 class="author-caption"> Twój web designer</h3>
+
+			<div class="contact-container">
+				<a href="https://github.com" target="_blank">
+					<object type="image/svg+xml" data="svg-icon/001-github-logo.svg">Your browser does not support SVGs</object>
+				</a>
+				
+				<a href="https://www.gmail.com/" target="_blank">
+					<object type="image/svg+xml" data="svg-icon/002-gmail.svg">Your browser does not support SVGs</object>
+				</a>
+
+				<a href="https://www.facebook.com/" target="_blank">
+					<object type="image/svg+xml" data="svg-icon/003-social.svg" >Your browser does not support SVGs</object>
+				</a>
+			</div>
+		</div>
+	</header>
+
+	<main>
+
+		<div id="technology-section" class="technology-section section">
+			<h4 class="section-header">TECHNOLOGY</h4>
+
+
+			<div class="tiles-container">
+				<div class="tile">
+					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+	
+					<h4>REPAIRS</h4>
+					<p>General Repairs,</p>
+					<p>Specialist Repairs</p>
+		 			<p>& Vintage Parts</p>
+				</div>
+				<div class="tile">
+					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+	
+					<h4>UPHOLSTERY</h4>
+					<p>A Range of fabrisc,</p>
+					<p>Including Vintage Leathers</p>
+		 			<p>& Wide variety of Colors</p>
+				</div>
+				<div class="tile">
+					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+	
+					<h4>PAINTWORK</h4>
+					<p>General Repairs,</p>
+					<p>Specialist Repairs</p>
+		 			<p>& Vintage Parts</p>
+				</div>
+			</div>
+
+		</div>
+
+		<div id="ourWork-section" class="ourWork-section section">
+			<h4 class="section-header">OUR WORK</h4>
+			<p>A collection of cars we've renovated with passion</p>
+			<figure class="gallery">
+				<img class="img" src="img/monkey.jpg">
+				<img class="img" src="img/monkey.jpg">
+				<img class="img" src="img/monkey.jpg">
+				<img class="img" src="img/monkey.jpg">
+				<img class="img" src="img/monkey.jpg">
+				<img class="img" src="img/monkey.jpg">
+			</figure>
+		</div>
+
+		<div id="aboutUs-section" class="aboutUs-section section">
+			<h4 class="section-header">ABOUT US</h4>
+
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus magna sit amet ipsum facilisis, eget commodo sem fringilla. In pulvinar faucibus ante, non ultricies magna facilisis dapibus. Proin suscipit feugiat tortor id consectetur. Proin in urna commodo, dictum eros at, imperdiet justo. Nulla euismod aliquam eros at commodo. Suspendisse laoreet nisi commodo cursus gravida. Proin eu semper nibh. Quisque vel rhoncus justo. Nullam rutrum et ligula quis gravida. Fusce enim odio, lacinia eget lacinia sit amet, hendrerit suscipit nisl. Pellentesque blandit consequat lacus. Nullam felis mi, cursus sed maximus vel, volutpat in leo.</p>			​
+			<p>TLorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus magna sit amet ipsum facilisis, eget commodo sem fringilla. In pulvinar faucibus ante, non ultricies magna facilisis dapibus. Proin suscipit feugiat tortor id consectetur. 
+			</p>
+		</div>
+
+		<div id="contact-section" class="contact-section section">
+			<h4 class="section-header">CONTACT </h4>
+			<div class="contact-container-bottom">
+				<address class="address">
+					<p>500 Terry Francois Street</p>
+					<p>San Francisco, CA 94158</p> 
+					<br>
+
+					<p>info@mysite.com</p>	
+					<br>
+					<p>Tel: 123-456-7890</p>
+					<br><br>
+
+					<p>OPENING HOURS:</p>					 
+					<br>
+					<p>Mon - Fri: 7am - 10pm</p>
+					​​<p>Saturday: 8am - 10pm</p>
+					​<p>Sunday: 8am - 11pm</p>					
+				</address>
+				<form class="contact-form">
+					<label>
+						<input type="text" name="firstname" placeholder="Imię" class="input">
+					</label>
+					<label>
+						<input type="text" name="lastname" placeholder="Nazwisko" class="input">
+					</label>
+					<label>
+						<input type="text" name="email" placeholder="E-mail" class="input">
+					</label>
+					<label>
+						<textarea type="text" placeholder="Wiadomość" class="input" name="message"></textarea>
+					</label>
+				</form>
+			</div>	
+		</div>
+	</main>
+	<footer class="footer">
+		<object type="image/svg+xml" data="svg-icon/003-github-logo.svg" fill="red">Your browser does not support SVGs</object>
+		<object type="image/svg+xml" data="svg-icon/002-gmail (2).svg">Your browser does not support SVGs</object>
+		<object type="image/svg+xml" data="svg-icon/001-facebook-logo-button.svg">Your browser does not support SVGs</object>
+		<p>© 2017 by Artur&Szydlo. Proudly created with FlexBox</p>
+		<!--Icon made by Freepik from www.flaticon.com -->
+	</footer>
+
+</body>
+</html>

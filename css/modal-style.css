@@ -1,0 +1,161 @@
+.modal{
+  
+}
+.modal {
+  position :fixed;
+  z-index: 999;
+  display: none;
+
+  background: #eeeeee;
+  padding: 3rem;
+  top:50%;
+  left:50%;
+  transform: translateX(-50%)  translateY(-50%);
+  border: solid 2px #000000;
+  opacity: 0;  
+  border-radius: 1rem;
+  color:#080809;
+
+  transition: opacity 0.5s;
+}
+
+.modal h2{
+  text-align: center;
+}
+
+body.modal-open .modal{
+  opacity: 1;
+  display: block;
+}
+
+body::after{
+  content:"";
+  display: none;
+   z-index: 1;
+ 
+  position: fixed;
+  top :0;
+  bottom:0;
+  right: 0;
+  left:0;
+  opacity: 0;
+  background: rgb(0,0,0);
+  transition: opacity 0.5s;
+  
+}
+body.modal-open::after{
+  opacity:0.6;
+  display:block;
+  
+}
+
+
+.input{
+  display:block;
+  border:1px solid #99aa99;
+  border-radius: 0.2rem;
+  width: 17rem;
+
+}
+.input.wrong-value{
+  border-color: red;
+}
+.sign-up .row {
+  margin-bottom: 0.4rem;
+}
+
+.progress {
+  margin: 10px 0 5px 0px;
+  width: 20rem;
+ }
+
+
+
+
+.close{
+  text-align:right;
+}
+.close:hover{
+  cursor: pointer;
+}
+
+
+
+
+progress::-webkit-progress-bar {
+  /* style rules */
+}
+progress::-webkit-progress-value {
+  background-color: #d8bcbc;
+  border: 0.1rem;
+  border-radius: 0.2rem;
+}
+progress::-moz-progress-bar {
+
+  background-color: #d8bcbc;
+  border: 0.1rem;
+  border-radius: 0.2rem;
+}
+
+
+
+
+.char{
+    font-size: 75%;
+    margin-top:0;
+    padding-top:0;
+    color: #c62b1f;
+
+}
+
+.input.wrong-value{
+  border-color: red;
+}
+
+#fewWords{
+  margin-bottom: 0;
+}
+.register-btn{
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  .modal { 
+  z-index: 999;
+  display: none;
+
+  background: #eeeeee;
+  padding: 3rem;  
+  border: none;
+  border-radius: 0;
+  opacity: 0;  
+  color:#080809;
+
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translateX(0%)  translateY(0%);
+
+
+
+
+  transition: opacity 0.5s;
+}
+
+
+body.modal-open .modal{
+  opacity: 1;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+body.modal-open::after{
+  display:none;  
+}
+}
