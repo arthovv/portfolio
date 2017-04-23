@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio na którym cwicze swoje umiejetnosci",
+  "main": "script.js",
+  "scripts": {
+    "test": "gulp_test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arthovv/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "webdev",
+    "gulp"
+  ],
+  "author": "Artur_Szydlo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/arthovv/portfolio/issues"
+  },
+  "homepage": "https://github.com/arthovv/portfolio#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

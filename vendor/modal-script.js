@@ -68,7 +68,13 @@ document.addEventListener("DOMContentLoaded", function () {
     text.addEventListener('keyup', howMuchChar, false);
 
 
-/*---------------------------------------------------------------------------------------------------*/  
+/*-------icon-hamburger staff----------*/  
+var iconHamburger = document.querySelector('.icon-hamburger');
+var iconHamburgerCross = document.querySelector('.icon-hamburger-cross');
+iconHamburger.addEventListener("click",showMenu,false);
+iconHamburgerCross.addEventListener("click",hideMenu,false);
+
+
 
 function howMuchChar() {
     var textLength = this.value.length;
@@ -163,6 +169,18 @@ function isPasswordCorrect() {
       password.classList.remove('wrong-value');
       enterpass.classList.remove('wrong-value');
     }
+}
+
+
+function showMenu() {  
+  var navContainer = document.querySelector('.nav-container');
+  navContainer.classList.add('open-menu');
+
+}
+
+function hideMenu(){
+  var navContainer = document.querySelector('.nav-container');
+  navContainer.classList.remove('open-menu');
 }
 
 

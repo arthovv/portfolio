@@ -70,10 +70,16 @@ body.modal-open::after{
  }
 
 
+.modal-header{
+  display: flex;
+  justify-content: space-between;
 
+  width: 17rem;
+
+}
 
 .close{
-  text-align:right;
+
 }
 .close:hover{
   cursor: pointer;
