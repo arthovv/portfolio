@@ -17,8 +17,8 @@
 	<link rel="stylesheet" type="text/css" href="css/modal-style.css">
 
 
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor/jquery.scrollTo.min.js"></script>
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery.scrollTo.min.js"></script> -->
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="vendor/modal-script.js"></script>
 </head>
@@ -28,7 +28,12 @@
 			<a href="#" title="go back to homepage" class="page-logo">
 				<h1>Portfolio</h1>
 			</a>
-
+			<div class="hamburger">
+				<svg class="hamburger-container" >
+	 				 <img class="icon-hamburger" src="svg-icon/002-menu-lines.svg">
+	 				 <img class="icon-hamburger-cross" src="svg-icon/001-cancel.svg">
+				</svg>
+			</div>
 			<nav class="page-nav ">
 				<ul class="nav-menu">
 					<li><a class="menu-link" id="home" href="#">Home</a></li>
@@ -46,25 +51,22 @@
 						    <form class="sign-up">
 						      <div class="row">
 						        <label for="firstname">Name: 
-						          <input type="text" id= "firstname" class="input" placeholder="Imię">
+						          <input type="text" id= "firstname" class="input" placeholder="Imię" minlength="3" maxlength="20" pattern="^[a-zA-Z\s]{3,}$">
 						        </label>
 						      </div>
 						      <div class="row"> 
 						        <label for="lastname">Last Name: 
-						          <input type="text" id= "lastname" class="input" placeholder="Nazwisko">
+						          <input type="text" id= "lastname" class="input" placeholder="Nazwisko" minlength="3" maxlength="20" pattern="^[a-zA-Z\s]{3,}$" required>
 						        </label>
 						      </div>
 						      <div class="row">
 						        <label for="email">E-mail: 
-						          <input type="" id="email" placeholder="Adres E-mail" class="input" >
+						          <input type="email" id="email" placeholder="Adres E-mail" class="input" required>
 						        </label>
 						      </div>
 						      <div class="row">
-						        <label for="dateofbirth">Date Of Birth:
-						         <select name="dateofbirth" id=" dateofbirth">
-						           <option value="">1900</option>
-						           <option value="">2000</option>
-						           <option value="">2010</option>
+						        <label for="dateOfBirth">Date Of Birth:
+						         <select name="dateOfBirth" id="dateOfBirth">
 						         </select>
 						       </label>
 						      </div>
@@ -75,8 +77,8 @@
 						        </label>
 						      </div>
 						      <div class="row">
-						        <label for="enterpass">Enter Password: 
-						          <input type="text" id="enterpass" class="input" placeholder="Powtórz hasło">
+						        <label for="confirmPassword">Enter Password: 
+						          <input type="text" id="confirmPassword" class="input" placeholder="Powtórz hasło">
 						        </label>
 						      </div>
 						      <div class="row">
@@ -87,19 +89,13 @@
 						        </label>
 						      </div>
 						      <div class="row register-btn">
-						        <button type="submit">Register</button>
+						        <button type="submit" class="register">Register</button>
 						      </div>
 						    </form>
 				    </div>
 			 </div>	
 
 			</nav>
-			<div class="hamburger">
-				<svg class="hamburger-container" >
-	 				 <img class="icon-hamburger" src="svg-icon/002-menu-lines.svg">
-	 				 <img class="icon-hamburger-cross" src="svg-icon/001-cancel.svg">
-				</svg>
-			</div>
 		</div>
 
 		<div class="author-container">	

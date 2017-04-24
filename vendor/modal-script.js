@@ -1,88 +1,89 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-  
-  var enterpass = document.querySelector('#enterpass');
-
- 
-
+    var InputData = {
+      firstname,
+      lastname,
+      email,
+      dateOfBirth,
+      password,
+      confirmPassword,
+      fewWords
+    };
+    console.log(InputData.email.value);
 
     var register = document.querySelector('.sign-up');
     register.addEventListener("click", function(){
       document.body.classList.add('modal-open');
-      howMuch.innerHTML = (maxLength);
+      dateOfBirthGenerate();
+      hideMenu();
     },false);
 
     var registerClose = document.querySelector('.close');
     registerClose.addEventListener("click", closeModal, false);
 
-    var checkData = document.querySelectorAll('#firstname, #lastname');
-    checkData.forEach(checkName);
+    /*var checkData = document.querySelectorAll('#firstname, #lastname');
+    checkData.forEach(checkName);*/
 
 
-    var mailAdress = document.querySelector('#email');
-    mailAdress.addEventListener('blur', function(){
+    InputData.email.addEventListener('blur', function(){
       var mailReg = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/;
       var inpMail = this.value;
       if(!mailReg.test(inpMail)){
          this.classList.add('wrong-value') ;
+         
+         console.log(InputData.email.validity);
       } else{
               this.classList.remove('wrong-value') ;
+              console.log(InputData.email.validity);
             } 
       });
 
     /*------------------------------------------------------------------------------------------------*/
-    var password = document.querySelector('#password');
-    var enterpass = document.querySelector('#enterpass');
+    
+    InputData.password.addEventListener('keyup', checkpass);
 
-    password.addEventListener('keyup', checkpass);
-
-    password.addEventListener('blur',isPasswordCorrect,false);
-    enterpass.addEventListener('blur',isPasswordCorrect);
+    InputData.password.addEventListener('blur',isPasswordCorrect,false);
+    InputData.confirmPassword.addEventListener('blur',isPasswordCorrect);
       document.addEventListener("keyup", function (event) {
         if (event.keyCode === 27) closeModal();
       }, false);
 
-    enterpass.addEventListener('blur',function(){
-      if(!this.value==inputPassword.value) console.log('hasła róznia sie');
-    },false);
+    
 
-
-
-
-
-
-    var registerButton = document.querySelector('.sign-up');
-    registerButton.addEventListener("submit",function(event){
+    var registerButton = document.querySelector('.register');
+    registerButton.addEventListener("click",function(event){
+        
+        console.log('zamykam1');
         event.preventDefault();
         console.log('zamykam');
-        window.setTimeout(closeModal, 1000);
+        InputData.firstname.validity =false;
+        console.log(InputData.firstname.validity);
+        window.setTimeout(closeModalAndRegister, 1000);
+      
     },false);
 
 
-    var text = document.querySelector('#fewWords');
+    const maxLength= InputData.fewWords.getAttribute('maxlength');
 
-    const maxLength= text.getAttribute('maxlength');
-    const howMuch = document.querySelector('.howMuchChar');
-
-
-    text.addEventListener('keyup', howMuchChar, false);
+    InputData.fewWords.addEventListener('keyup', howMuchChar, false);
 
 
 /*-------icon-hamburger staff----------*/  
 var iconHamburger = document.querySelector('.icon-hamburger');
 var iconHamburgerCross = document.querySelector('.icon-hamburger-cross');
+
 iconHamburger.addEventListener("click",showMenu,false);
 iconHamburgerCross.addEventListener("click",hideMenu,false);
 
 
-
+const howMuch = document.querySelector('.howMuchChar');
 function howMuchChar() {
-    var textLength = this.value.length;
+    var textLength = this.value.length;    
     howMuch.innerHTML = (maxLength - textLength);
 }
 
 function closeModal() {
-  isPasswordCorrect();
+
     document.body.classList.remove('modal-open');
     document.querySelector('form.sign-up').reset();
     var input  = document.querySelectorAll('.input');
@@ -94,8 +95,15 @@ function closeModal() {
       };
 }
 
+function closeModalAndRegister() {
+  if(InputData.firstname.validity.patternMismatch!=true && InputData.lastname.validity.patternMismatch!=true
+    && InputData.email.validity.typeMismatch!=true){
+    closeModal();
+  }
+}
 
-function checkName(value,index){
+
+/*function checkName(value,index){
         checkData[index].addEventListener('blur',function(){
           var nameReg = /^[a-zA-Z\s]{3,}$/;
           var inpValue = this.value;
@@ -104,12 +112,22 @@ function checkName(value,index){
               this.classList.add('wrong-value') ;
             } else 
               {
-                this.classList.remove('wrong-value') ;
+                this.classList.remove('wrong-value');
+                 
               } 
         },false);
+}*/
+
+function dateOfBirthGenerate() {
+  var d = new Date();
+  var currentYear = d.getFullYear();
+  for (i=1900; i<=currentYear;i++){
+
+    var element = document.createElement("option");
+    element.appendChild(document.createTextNode( i ));
+    document.getElementById('dateOfBirth').appendChild(element);
+  }
 }
-
-
 
 
 var  passwordStrength = function (password) {
@@ -145,29 +163,30 @@ function checkpass(password){
 
  progress.value = strength.value;
  progress.max = strength.max;
- 
-}
+ }
 
 
 
 function isPasswordCorrect() {
 
   var passwordValue = password.value;
-  var enterpassValue = enterpass.value;
+  var confirmPasswordValue = confirmPassword.value;
   
-    if(enterpassValue!=""){
-      if(passwordValue!==enterpassValue) {
+    if(confirmPasswordValue!=""){
+      if(passwordValue!==confirmPasswordValue) {
+
         console.log('Hasło nie się zgadza');
         password.classList.add('wrong-value');
-        enterpass.classList.add('wrong-value');
+        confirmPassword.classList.add('wrong-value');
+
       }  else {
         console.log('hasło zgadza się');
         password.classList.remove('wrong-value');
-        enterpass.classList.remove('wrong-value');
+        confirmPassword.classList.remove('wrong-value');
       }
     } else{
       password.classList.remove('wrong-value');
-      enterpass.classList.remove('wrong-value');
+      confirmPassword.classList.remove('wrong-value');
     }
 }
 
@@ -176,12 +195,20 @@ function showMenu() {
   var navContainer = document.querySelector('.nav-container');
   navContainer.classList.add('open-menu');
 
+  clickMenuOption = document.querySelectorAll('.menu-link');
+
+  clickMenuOption.forEach(function(value, index) {
+    clickMenuOption[index].addEventListener('click',hideMenu);
+  });
+
 }
 
 function hideMenu(){
   var navContainer = document.querySelector('.nav-container');
   navContainer.classList.remove('open-menu');
 }
+
+
 
 
 });
