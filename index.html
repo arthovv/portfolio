@@ -17,8 +17,8 @@
 	<link rel="stylesheet" type="text/css" href="css/modal-style.css">
 
 
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-	<script type="text/javascript" src="vendor/jquery.scrollTo.min.js"></script> -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+	<script type="text/javascript" src="vendor/jquery.scrollTo.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 	<script type="text/javascript" src="vendor/modal-script.js"></script>
 </head>
@@ -51,7 +51,7 @@
 						    <form class="sign-up">
 						      <div class="row">
 						        <label for="firstname">Name: 
-						          <input type="text" id= "firstname" class="input" placeholder="Imię" minlength="3" maxlength="20" pattern="^[a-zA-Z\s]{3,}$">
+						          <input type="text" id= "firstname" class="input" placeholder="Imię" minlength="3" maxlength="20" pattern="^[a-zA-Z\s]{3,}$" required>
 						        </label>
 						      </div>
 						      <div class="row"> 
@@ -66,19 +66,20 @@
 						      </div>
 						      <div class="row">
 						        <label for="dateOfBirth">Date Of Birth:
-						         <select name="dateOfBirth" id="dateOfBirth">
+						         <select name="dateOfBirth" id="dateOfBirth" required>
+						         <option disabled selected value> -- select an option -- </option>
 						         </select>
 						       </label>
 						      </div>
 						      <div class="row pass-container">
 						        <label for="password">Password: 
-						          <input type="text" id="password" class="input" placeholder="Hasło"> 
+						          <input type="text" id="password" class="input" placeholder="Hasło" required> 
 						          <progress id ="passwordComplete" class="input" class="progress" value="0"></progress>
 						        </label>
 						      </div>
 						      <div class="row">
 						        <label for="confirmPassword">Enter Password: 
-						          <input type="text" id="confirmPassword" class="input" placeholder="Powtórz hasło">
+						          <input type="text" id="confirmPassword" class="input" placeholder="Powtórz hasło" required>
 						        </label>
 						      </div>
 						      <div class="row">
@@ -127,7 +128,7 @@
 
 			<div class="tiles-container">
 				<div class="tile">
-					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+					<object type="image/svg+xml" data="svg-icon/003-github-logo.svg">Your browser does not support SVGs</object>
 	
 					<h4>REPAIRS</h4>
 					<p>General Repairs,</p>
@@ -135,7 +136,7 @@
 		 			<p>& Vintage Parts</p>
 				</div>
 				<div class="tile">
-					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+					<object type="image/svg+xml" data="svg-icon/003-github-logo.svg">Your browser does not support SVGs</object>
 	
 					<h4>UPHOLSTERY</h4>
 					<p>A Range of fabrisc,</p>
@@ -143,7 +144,7 @@
 		 			<p>& Wide variety of Colors</p>
 				</div>
 				<div class="tile">
-					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+					<object type="image/svg+xml" data="svg-icon/003-github-logo.svg">Your browser does not support SVGs</object>
 	
 					<h4>PAINTWORK</h4>
 					<p>General Repairs,</p>
@@ -151,7 +152,7 @@
 		 			<p>& Vintage Parts</p>
 				</div>
 				<div class="tile">
-					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+					<object type="image/svg+xml" data="svg-icon/003-github-logo.svg">Your browser does not support SVGs</object>
 	
 					<h4>UPHOLSTERY</h4>
 					<p>A Range of fabrisc,</p>
@@ -159,7 +160,7 @@
 		 			<p>& Wide variety of Colors</p>
 				</div>
 				<div class="tile">
-					<object type="image/svg+xml" data="svg-icon/001-draw.svg">Your browser does not support SVGs</object>
+					<object type="image/svg+xml" data="svg-icon/003-github-logo.svg">Your browser does not support SVGs</object>
 	
 					<h4>UPHOLSTERY</h4>
 					<p>A Range of fabrisc,</p>

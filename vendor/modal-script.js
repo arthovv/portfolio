@@ -1,15 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 
-    var InputData = {
-      firstname,
-      lastname,
-      email,
-      dateOfBirth,
-      password,
-      confirmPassword,
-      fewWords
-    };
-    console.log(InputData.email.value);
+    
+  var UserInputData = {
+    firstname,
+    lastname,
+    email,
+    dateOfBirth,
+    password,
+    confirmPassword,
+    fewWords
+  };
+
+  var iconHamburger = document.querySelector('.icon-hamburger');
+  var iconHamburgerCross = document.querySelector('.icon-hamburger-cross');
+
+  iconHamburger.addEventListener("click",showMenu,false);
+  iconHamburgerCross.addEventListener("click",hideMenu,false);
+
 
     var register = document.querySelector('.sign-up');
     register.addEventListener("click", function(){
@@ -25,25 +32,20 @@ document.addEventListener("DOMContentLoaded", function () {
     checkData.forEach(checkName);*/
 
 
-    InputData.email.addEventListener('blur', function(){
+    /*UserInputData.email.addEventListener('blur', function(){
       var mailReg = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/;
       var inpMail = this.value;
       if(!mailReg.test(inpMail)){
-         this.classList.add('wrong-value') ;
-         
-         console.log(InputData.email.validity);
+         this.classList.add('wrong-value') ;        
       } else{
               this.classList.remove('wrong-value') ;
-              console.log(InputData.email.validity);
             } 
-      });
-
-    /*------------------------------------------------------------------------------------------------*/
+      });*/
     
-    InputData.password.addEventListener('keyup', checkpass);
+    UserInputData.password.addEventListener('keyup', checkpass);
+    UserInputData.password.addEventListener('blur',isPasswordCorrect,false);
 
-    InputData.password.addEventListener('blur',isPasswordCorrect,false);
-    InputData.confirmPassword.addEventListener('blur',isPasswordCorrect);
+    UserInputData.confirmPassword.addEventListener('blur',isPasswordCorrect);
       document.addEventListener("keyup", function (event) {
         if (event.keyCode === 27) closeModal();
       }, false);
@@ -53,30 +55,19 @@ document.addEventListener("DOMContentLoaded", function () {
     var registerButton = document.querySelector('.register');
     registerButton.addEventListener("click",function(event){
         
-        console.log('zamykam1');
         event.preventDefault();
-        console.log('zamykam');
-        InputData.firstname.validity =false;
-        console.log(InputData.firstname.validity);
         window.setTimeout(closeModalAndRegister, 1000);
       
     },false);
 
 
-    const maxLength= InputData.fewWords.getAttribute('maxlength');
+const maxLength= UserInputData.fewWords.getAttribute('maxlength');
 
-    InputData.fewWords.addEventListener('keyup', howMuchChar, false);
-
-
-/*-------icon-hamburger staff----------*/  
-var iconHamburger = document.querySelector('.icon-hamburger');
-var iconHamburgerCross = document.querySelector('.icon-hamburger-cross');
-
-iconHamburger.addEventListener("click",showMenu,false);
-iconHamburgerCross.addEventListener("click",hideMenu,false);
+UserInputData.fewWords.addEventListener('keyup', howMuchChar, false);
 
 
 const howMuch = document.querySelector('.howMuchChar');
+
 function howMuchChar() {
     var textLength = this.value.length;    
     howMuch.innerHTML = (maxLength - textLength);
@@ -93,12 +84,22 @@ function closeModal() {
       {
         input[i].classList.remove('wrong-value');
       };
+    console.log(UserInputData.dateOfBirth.value);
 }
 
 function closeModalAndRegister() {
-  if(InputData.firstname.validity.patternMismatch!=true && InputData.lastname.validity.patternMismatch!=true
-    && InputData.email.validity.typeMismatch!=true){
+  if(UserInputData.firstname.validity.patternMismatch!=true && UserInputData.lastname.validity.patternMismatch!=true
+    && UserInputData.email.validity.typeMismatch!=true
+    && UserInputData.dateOfBirth.value!=0
+    && UserInputData.password.value!=0
+    && UserInputData.password.value==UserInputData.confirmPassword.value){
+    
+    var user1 = UserInputData.firstname.value + UserInputData.lastname.value;
+    saveToLocalStorage(user1, UserInputData);
+    alert("Odczytano z localStorage: " + readFromLocalStorage(user1));
     closeModal();
+  } else {
+    alert("Wypełnij poprawnie wszystkie pola formularza");
   }
 }
 
@@ -208,6 +209,17 @@ function hideMenu(){
   navContainer.classList.remove('open-menu');
 }
 
+
+function saveToLocalStorage(newObjectName, data) {
+
+  localStorage.setItem(newObjectName, JSON.stringify(data));
+
+}
+
+function readFromLocalStorage(element) {
+
+  return JSON.parse(localStorage.getItem(element));
+}
 
 
 

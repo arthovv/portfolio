@@ -12,6 +12,27 @@ body{
 	background: url('img/background.jpg')no-repeat fixed center;
 }
 
+body::after{
+  content:"";
+  display: none;
+   z-index: 1;
+ 
+  position: fixed;
+  top :0;
+  bottom:0;
+  right: 0;
+  left:0;
+  opacity: 0;
+  background: rgb(0,0,0);
+  transition: opacity 0.5s;
+  
+}
+body.gallery-open::after{
+  opacity:0.6;
+  display:block;
+  
+}
+
 
 object{
 	width: 2rem;
@@ -202,7 +223,7 @@ li.sign-up:hover{
 	background: url('img/background-1.jpg');
 }
 .technology-section object{
-	width: 9rem;
+	width: 6rem;
 }
 .tiles-container{
 	display: flex;
@@ -234,13 +255,20 @@ li.sign-up:hover{
 	justify-content: space-around;
 	margin-bottom: 2rem;
 }
-.gallery .img{
-	max-width: 25rem;
-	padding: 1rem;
+.img{
+	max-width: 22rem;
+	padding: 0.5rem;
 }
 .gallery .img:hover{
 	transform: scale(1.05);
+	cursor: pointer;
 
+}
+body.gallery-open .gallery {
+	justify-content: center;
+}
+body.gallery-open .img{
+	max-width: 5rem;
 }
 
 .aboutUs-section{
