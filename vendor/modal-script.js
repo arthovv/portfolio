@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
     checkData.forEach(checkName);*/
 
 
-    /*UserInputData.email.addEventListener('blur', function(){
+    UserInputData.email.addEventListener('blur', function(){
       var mailReg = /^[0-9a-zA-Z_.-]+@[0-9a-zA-Z.-]+\.[a-zA-Z]{2,3}$/;
       var inpMail = this.value;
       if(!mailReg.test(inpMail)){
@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
       } else{
               this.classList.remove('wrong-value') ;
             } 
-      });*/
+      });
     
     UserInputData.password.addEventListener('keyup', checkpass);
     UserInputData.password.addEventListener('blur',isPasswordCorrect,false);
@@ -79,12 +79,13 @@ function closeModal() {
     document.querySelector('form.sign-up').reset();
     var input  = document.querySelectorAll('.input');
     var inputLength = input.length;
-    console.log(inputLength);
+    
       for (i=0; i<inputLength; i++)
       {
         input[i].classList.remove('wrong-value');
       };
-    console.log(UserInputData.dateOfBirth.value);
+    var progress = document.querySelector('#passwordComplete');
+    progress.value = 0;
 }
 
 function closeModalAndRegister() {
