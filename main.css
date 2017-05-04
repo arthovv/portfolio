@@ -34,11 +34,13 @@ body.gallery-open::after{
 }
 
 
-object{
+object, .contact-tile{
 	width: 2rem;
 	margin: 1rem 0.5rem;
 }
-
+.footer .contact-tile{
+	fill: #e9cdcd;
+}
 
 .page-header{
 	height: 100vh;
@@ -403,7 +405,13 @@ textarea.input{
 
 
 	.icon-hamburger-cross{
-		display: none;		
+		display: none;
+
+		background: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNS40IDM1LjQiPjxwYXRoIGQ9Ik0yMC41IDE3LjNMMzQgMy44YzAuOC0wLjggMC44LTIgMC0yLjggLTAuOC0wLjgtMi0wLjgtMi44IDBMMTcuNyAxNC41IDQuMiAxYy0wLjgtMC44LTItMC44LTIuOCAwcy0wLjggMiAwIDIuOGwxMy41IDEzLjVMMC42IDMxLjZjLTAuOCAwLjgtMC44IDIgMCAyLjggMC40IDAuNCAwLjkgMC42IDEuNCAwLjZzMS0wLjIgMS40LTAuNmwxNC4zLTE0LjNMMzIgMzQuNGMwLjQgMC40IDAuOSAwLjYgMS40IDAuNnMxLTAuMiAxLjQtMC42YzAuOC0wLjggMC44LTIgMC0yLjhMMjAuNSAxNy4zeiIgZmlsbD0iICNlOWNkY2QiLz48L3N2Zz4=)no-repeat center center;
+	    background-size: contain;
+
+		width: inherit;
+		margin:0;		
 	}
 
 	.nav-container.open-menu .icon-hamburger{
@@ -412,8 +420,7 @@ textarea.input{
 	.nav-container.open-menu .icon-hamburger-cross{
 		display: initial;
 
-		fill: #e9cdcd;
-		margin:0;
+		
 		
 	}
 	.nav-container{
