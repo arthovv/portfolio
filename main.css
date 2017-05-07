@@ -9,7 +9,7 @@ body{
 	
 	color:#080809;
 
-	background: url('img/background.jpg')no-repeat fixed center;
+	background: url('assets/img/background.jpg')no-repeat fixed center;
 }
 
 body::after{
@@ -54,7 +54,7 @@ object, .contact-tile{
 	align-items: baseline;
 	flex-wrap: wrap;
 	width: 100%;
-	background: url('img/background-1.jpg');
+	background: url('assets/img/background-1.jpg');
 
 	-webkit-box-shadow: 0px 8px 28px 0px rgba(39,41,42,1);
 	-moz-box-shadow: 0px 8px 28px 0px rgba(39,41,42,1);
@@ -222,7 +222,7 @@ li.sign-up:hover{
 	text-align: center;
 	color: #d8bcbc;
 
-	background: url('img/background-1.jpg');
+	background: url('assets/img/background-1.jpg');
 }
 .technology-section object{
 	width: 6rem;
@@ -252,13 +252,13 @@ li.sign-up:hover{
 
 }
 .gallery{
-	display: flex;
+	display: flex;	
 	flex-wrap: wrap;
 	justify-content: space-around;
 	margin-bottom: 2rem;
+	width: 100%;
 }
 .img{
-	max-width: 22rem;
 	padding: 0.5rem;
 }
 .gallery .img:hover{
@@ -276,7 +276,7 @@ body.gallery-open .img{
 .aboutUs-section{
 	color: #d8bcbc;
 	
-	background: url('img/background-1.jpg');
+	background: url('assets/img/background-1.jpg');
 }
 
 .aboutUs-section p{
@@ -327,7 +327,7 @@ textarea.input{
 	text-align: center;
 	padding: 0.3rem;
 	
-	background: url('img/background-1.jpg');
+	background: url('assets/img/background-1.jpg');
 }
 .footer p{
 	margin: 0;
@@ -365,7 +365,7 @@ textarea.input{
     	margin:0;
     	padding-bottom: 1rem;
     	padding-top: 1rem;
-    	border-bottom: 1px solid hsla(0, 26%, 79%, 0.3);
+    	border-bottom: 1px solid rgba(215, 188, 188, 0.3);
     }
 
   

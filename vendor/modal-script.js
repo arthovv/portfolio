@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
     var registerClose = document.querySelector('.close');
     registerClose.addEventListener("click", closeModal, false);
 
-    /*var checkData = document.querySelectorAll('#firstname, #lastname');
-    checkData.forEach(checkName);*/
+    var checkData = document.querySelectorAll('#firstname, #lastname');
+    checkData.forEach(checkName);
 
 
     UserInputData.email.addEventListener('blur', function(){
@@ -105,7 +105,7 @@ function closeModalAndRegister() {
 }
 
 
-/*function checkName(value,index){
+function checkName(value,index){
         checkData[index].addEventListener('blur',function(){
           var nameReg = /^[a-zA-Z\s]{3,}$/;
           var inpValue = this.value;
@@ -118,7 +118,7 @@ function closeModalAndRegister() {
                  
               } 
         },false);
-}*/
+}
 
 function dateOfBirthGenerate() {
   var d = new Date();
