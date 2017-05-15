@@ -440,4 +440,8 @@ textarea.input{
 		max-width: 100%;
 	}
 
+	.caption{	
+	font-size: 400%;
+	}
+
 }
