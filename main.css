@@ -144,6 +144,9 @@ li.sign-up:hover{
 
 	padding: 1rem;
 }
+.author-container .author-header{
+	text-align: center;
+}
 .caption{
 	font-family: 'Lobster', cursive;
 	font-weight: 800;

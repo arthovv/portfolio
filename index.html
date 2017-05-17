@@ -2,14 +2,15 @@
 <html lang="pl">
 <head>
 	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="icon" href="assets/img/Pencil.ico" type="image/gif" sizes="32x32">
-	<title>Portfolio</title>
-
 	<meta name="description" content="Strona stworzona podczas nauki programowania" />
 	<meta name="keywords" content="słowa, kluczowe, wypisane, po, porzecinku" />
+
+    <link rel="icon" href="assets/img/Pencil.ico" type="image/gif" sizes="32x32">
+    <title>Portfolio</title>
+
+	
 
 	<link href="https://fonts.googleapis.com/css?family=Lobster|Open+Sans:400,700,800" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700&amp;subset=latin-ext" rel="stylesheet"> 
@@ -40,7 +41,7 @@
 					<li class="sign-up">Sign up</li>
 				</ul>
 					
-				<div class="modal-container" >
+				<section class="modal-container" >
 			    
 				    <div class="modal">
 				            <div class="modal-header row"><h2>Create Account:</h2><div class="close">[X]</div></div>
@@ -68,9 +69,10 @@
 						       </label>
 						      </div>
 						      <div class="row pass-container">
-						        <label for="password">Password: 
-						          <input type="password" id="password" class="input" placeholder="Hasło" required> 
-						          <progress id ="passwordComplete" class="input" class="progress" value="0"></progress>
+						        <label for="pass">
+						        	Password:
+						        	<input type="password" id="password" class="input" placeholder="Hasło" required>
+						          	<progress id ="passwordComplete" class="input progress" value="0"></progress>
 						        </label>
 						      </div>
 						      <div class="row">
@@ -90,15 +92,17 @@
 						      </div>
 						    </form>
 				    </div>
-			 </div>	
+				</section>	
 
 			</nav>
 		</div>
 
 		<div class="author-container">	
-			<h1 class="caption">Fortpolio</h1>
-			<h1 class="author-name"> Artur Szydło</h1>
-			<h3 class="author-caption"> Your Web Designer</h3>
+			<header class="author-header ">
+				<h1 class="caption">Fortpolio</h1>
+				<h1 class="author-name"> Artur Szydło</h1>
+				<h3 class="author-caption"> Your Web Designer</h3>
+			</header>
 
 			<div class="contact-container">
 				<a href="https://github.com/arthovv" target="_blank">
@@ -127,15 +131,15 @@
 
 	<main>
 
-		<div id="technology-section" class="technology-section section">
-			<h4 class="section-header">TECHNOLOGY</h4>
-
-
+		<section id="technology-section" class="technology-section section">
+			<header>
+				<h4 class="section-header">TECHNOLOGY</h4>
+			</header>
 			<div class="tiles-container">
 				<div class="tile">
 					<i class="icon icon-android" ></i>
 	
-					<h4>ANDROID</h4>
+					<header><h4>ANDROID</h4></header>
 					<p>Lorem Ipsum,</p>
 					<p>Specialist Repairs</p>
 		 			<p>&amp; Vintage Parts</p>
@@ -143,7 +147,7 @@
 				<div class="tile">
 					<i class="icon icon-code" ></i>
 	
-					<h4>HTML</h4>
+					<header><h4>HTML</h4></header>
 					<p>Lorem ipsum dolor sit amet,</p>
 					<p>Including Vintage Leathers</p>
 		 			<p>&amp; Wide variety of Colors</p>
@@ -151,7 +155,7 @@
 				<div class="tile">
 					<i class="icon icon-css" ></i>
 	
-					<h4>CSS</h4>
+					<header><h4>CSS</h4></header>
 					<p>Lorem Ipsum,</p>
 					<p>Specialist Repairs</p>
 		 			<p>&amp; Vintage Parts</p>
@@ -159,7 +163,7 @@
 				<div class="tile">
 					<i class="icon icon-html" ></i>
 	
-					<h4>HTML 5</h4>
+					<header><h4>HTML 5</h4></header>
 					<p>Lorem ipsum dolor sit amet,</p>
 					<p>Including Vintage Leathers</p>
 		 			<p>&amp; Wide variety of Colors</p>
@@ -167,7 +171,7 @@
 				<div class="tile">
 					<i class="icon icon-laptop" ></i>
 	
-					<h4>HARDWARE</h4>
+					<header><h4>HARDWARE</h4></header>
 					<p>Lorem ipsum dolor sit amet,</p>
 					<p>Including Vintage Leathers</p>
 		 			<p>&amp; Wide variety of Colors</p>
@@ -175,40 +179,48 @@
 				<div class="tile">
 					<i class="icon icon-programmer" ></i>
 	
-					<h4>PROGRAMMING</h4>
+					<header><h4>PROGRAMMING</h4></header>
 					<p>Lorem Ipsum,</p>
 					<p>Specialist Repairs</p>
 		 			<p>&amp; Vintage Parts</p>
 				</div>
 			</div>
 
-		</div>
+		</section>
 
-		<div id="ourWork-section" class="ourWork-section section">
-			<h4 class="section-header">OUR WORK</h4>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante eros, imperdiet id feugiat id, varius ut arcu. Ut in ligula imperdiet</p>
+		<section id="ourWork-section" class="ourWork-section section">
+			<header>
+				<h4 class="section-header">OUR WORK</h4>
+			</header>
+			<p>
+				<strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ante eros, imperdiet id feugiat id, varius ut arcu. Ut in ligula imperdiet</strong>
+			</p>
 			<figure class="gallery">
-				<img class="img" src="assets/img/web.jpg">
-				<img class="img" src="assets/img/web4.jpg">
-				<img class="img" src="assets/img/web5.jpg">
-				<img class="img" src="assets/img/web.jpg">
-				<img class="img" src="assets/img/web5.jpg">
-				<img class="img" src="assets/img/web4.jpg">
-				<img class="img" src="assets/img/web.jpg">
-				<img class="img" src="assets/img/web4.jpg">
+				<img class="img"  alt="picture in gallery" src="assets/img/web.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web4.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web5.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web5.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web4.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web.jpg">
+				<img class="img" alt="picture in gallery" src="assets/img/web4.jpg">
 			</figure>
-		</div>
+		</section>
 
-		<div id="aboutUs-section" class="aboutUs-section section">
-			<h4 class="section-header">ABOUT US</h4>
+		<section id="aboutUs-section" class="aboutUs-section section">
+			<header>
+				<h4 class="section-header">ABOUT US</h4>
+			</header>
 
 			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus magna sit amet ipsum facilisis, eget commodo sem fringilla. In pulvinar faucibus ante, non ultricies magna facilisis dapibus. Proin suscipit feugiat tortor id consectetur. Proin in urna commodo, dictum eros at, imperdiet justo. Nulla euismod aliquam eros at commodo. Suspendisse laoreet nisi commodo cursus gravida. Proin eu semper nibh. Quisque vel rhoncus justo. Nullam rutrum et ligula quis gravida. Fusce enim odio, lacinia eget lacinia sit amet, hendrerit suscipit nisl. Pellentesque blandit consequat lacus. Nullam felis mi, cursus sed maximus vel, volutpat in leo.</p>			​
 			<p>TLorem ipsum dolor sit amet, consectetur adipiscing elit. In tempus magna sit amet ipsum facilisis, eget commodo sem fringilla. In pulvinar faucibus ante, non ultricies magna facilisis dapibus. Proin suscipit feugiat tortor id consectetur. 
 			</p>
-		</div>
+		</section>
 
-		<div id="contact-section" class="contact-section section">
-			<h4 class="section-header">CONTACT </h4>
+		<section id="contact-section" class="contact-section section">
+			<header>
+				<h4 class="section-header">CONTACT </h4>
+			</header>
 			<div class="contact-container-bottom">
 				<address class="address">
 					<p>500 Terry Francois Street</p>
@@ -241,7 +253,7 @@
 					</label>
 				</form>
 			</div>	
-		</div>
+		</section>
 	</main>
 	<footer class="footer">
 		<a href="https://github.com" target="_blank">
