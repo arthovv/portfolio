@@ -7,15 +7,15 @@ body{
 	padding: 0;
 	font-family: 'Josefin Sans', sans-serif;
 	
-	color:#080809;
+	color:#d8bcbc;
 
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-    	background-position: center; 
+    background-position: center; 
 
 	background-image: url('assets/img/background_1920x1080.jpg');
-    /*background-image: -webkit-image-set(
+   /* background-image: -webkit-image-set(
         url('assets/img/background_320x240.jpg') 1x,
         url('assets/img/background_640x480.jpg') 2x,
         url('assets/img/background_1920x1080.jpg') 3x
@@ -25,7 +25,8 @@ body{
         url('assets/img/background_320x240.jpg') 1x,
         url('assets/img/background_640x480.jpg') 2x,
         url('assets/img/background_1920x1080.jpg') 3x
-    );*/
+    );
+    */
 
 }
 
@@ -178,7 +179,7 @@ li.sign-up:hover{
 	margin: auto;
 	margin-top: 1.5rem;
 
-	border-bottom: 0.2rem solid #080809;
+	border-bottom: 0.2rem solid #d8bcbc;
 	content: '';
 
 }
@@ -204,6 +205,9 @@ li.sign-up:hover{
 	display: flex;
 	align-items: flex-end;
 	height: 100%;
+}
+.contact-tile{
+fill: #d8bcbc;
 }
 
 
@@ -452,10 +456,7 @@ textarea.input{
 
 
 @media screen and (max-width: 768px) {
-	body{
-		background-size: 100%;
-	}
-
+	
 	.contact-form{
 		padding: 0;
 	}
