@@ -12,10 +12,10 @@ body{
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
-    background-position: center; 
+    	background-position: center; 
 
 	background-image: url('assets/img/background_1920x1080.jpg');
-    background-image: -webkit-image-set(
+    /*background-image: -webkit-image-set(
         url('assets/img/background_320x240.jpg') 1x,
         url('assets/img/background_640x480.jpg') 2x,
         url('assets/img/background_1920x1080.jpg') 3x
@@ -25,7 +25,7 @@ body{
         url('assets/img/background_320x240.jpg') 1x,
         url('assets/img/background_640x480.jpg') 2x,
         url('assets/img/background_1920x1080.jpg') 3x
-    );
+    );*/
 
 }
 
