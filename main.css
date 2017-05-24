@@ -179,7 +179,7 @@ li.sign-up:hover{
 	margin: auto;
 	margin-top: 1.5rem;
 
-	border-bottom: 0.2rem solid #d8bcbc;
+	border-bottom: 0.2rem solid #ba6c6c;
 	content: '';
 
 }
@@ -278,12 +278,13 @@ fill: #d8bcbc;
 .gallery{
 	display: flex;	
 	flex-wrap: wrap;
-	justify-content: space-around;
+	justify-content: center;
 	margin-bottom: 2rem;
 	width: 100%;
 }
 .img{
-	padding: 0.5rem;
+	max-width: 100%;
+	height: auto;
 }
 .gallery .img:hover{
 	transform: scale(1.05);
@@ -320,8 +321,7 @@ body.gallery-open .img{
 
 .address{
 	text-align: left;
-	padding: 1rem;
-	padding-right: 3rem;
+	padding:  0 3rem 1rem 1rem;
 
 }
 .address p{
@@ -330,9 +330,7 @@ body.gallery-open .img{
 }
 
 .contact-form{
-	padding: 1rem;
-	padding-left: 3rem;
-
+	padding: 0 1rem 1rem 3rem;
 }
 
 .input{
@@ -464,8 +462,23 @@ textarea.input{
 		max-width: 100%;
 	}
 
+}
+
+@media screen and (max-width: 500px) {
 	.caption{	
 	font-size: 400%;
 	}
-
+	.contact-container-bottom{
+		padding:0;
+	}
+	.contact-form{
+		width: 100%;
+		max-width: 17rem;
+	}
+	.contact-container-bottom .address{
+		padding-right: 1rem;
+	}
+	.contact-form .input{
+		width: 100%;
+	}
 }
